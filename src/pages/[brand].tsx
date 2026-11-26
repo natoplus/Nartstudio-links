@@ -22,7 +22,7 @@ export default function BrandPage({ slug, hub }: BrandPageProps) {
       <main id="main-content" className={`brand-page brand-page-${hub.accent}`}>
         <p className="eyebrow"><Link href="/">LINKS</Link> / {hub.name.toUpperCase()}</p>
         <div className="brand-page-hero">
-          <div className="brand-page-art" aria-hidden="true"><span>{hub.name === 'Nartstudio' ? 'N' : hub.name.slice(0, 1)}</span></div>
+          <div className="brand-page-art" data-parallax-depth="-0.055" aria-hidden="true"><span>{hub.name === 'Nartstudio' ? 'N' : hub.name.slice(0, 1)}</span></div>
           <div className="brand-page-copy">
             <p className="eyebrow">{hub.discipline}</p>
             <h1>{hub.name}<br /><em>Start here.</em></h1>

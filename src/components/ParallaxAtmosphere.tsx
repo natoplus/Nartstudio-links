@@ -8,9 +8,10 @@ export default function ParallaxAtmosphere() {
     let frame = 0
     const update = () => {
       window.cancelAnimationFrame(frame)
-      frame = window.requestAnimationFrame(() => element.querySelectorAll<HTMLElement>('[data-depth]').forEach(layer => {
-        const offset = Math.max(-105, Math.min(105, window.scrollY * Number(layer.dataset.depth)))
-        layer.style.transform = `translate3d(0, ${offset}px, 0)`
+      frame = window.requestAnimationFrame(() => element.parentElement?.querySelectorAll<HTMLElement>('[data-depth], [data-parallax-depth]').forEach(layer => {
+        const depth = Number(layer.dataset.depth ?? layer.dataset.parallaxDepth)
+        const offset = Math.max(-105, Math.min(105, window.scrollY * depth))
+        layer.style.setProperty('--parallax-offset', `${offset}px`)
       }))
     }
     update()

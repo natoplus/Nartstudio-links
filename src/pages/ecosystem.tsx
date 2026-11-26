@@ -21,7 +21,7 @@ export default function Ecosystem() {
             const content = (
               <>
                 <span>{String(index + 1).padStart(2, '0')} / NARTSTUDIO</span>
-                <span className="ecosystem-brand-art"><img src={brand.image} alt="" loading="lazy" /></span>
+                <span className="ecosystem-brand-art"><img src={brand.image} alt="" loading="lazy" data-parallax-depth={index % 2 === 0 ? '-0.035' : '0.035'} /></span>
                 <h2>{brand.name}</h2>
                 <p>{brand.description}</p>
                 <span className="ecosystem-action">Explore destination <b aria-hidden="true">↗</b></span>

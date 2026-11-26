@@ -51,7 +51,7 @@ export default function LinkHub({ source, campaign }: HomeProps) {
       </Head>
       <main id="main-content">
         <section className="hero">
-          <div className="hero-object" aria-hidden="true"><span /><i /></div>
+          <div className="hero-object" data-parallax-depth="-0.08" aria-hidden="true"><span /><i /></div>
           <div className="hero-copy">
             <p className="eyebrow"><span className="eyebrow-line" /> THE NARTSTUDIO UNIVERSE</p>
             <h1><span>Worlds</span><span className="hero-final-line">in <em>motion.</em></span></h1>
@@ -121,7 +121,7 @@ export default function LinkHub({ source, campaign }: HomeProps) {
                   <span className="brand-index">{String(index + 1).padStart(2, '0')} / NARTSTUDIO</span>
                   <span className="brand-art" aria-hidden="true">
                     <i />
-                    <img className={`brand-art-image brand-art-image-${brand.imageType}`} src={brand.image} alt="" loading="lazy" />
+                    <img className={`brand-art-image brand-art-image-${brand.imageType}`} src={brand.image} alt="" loading="lazy" data-parallax-depth={index % 2 === 0 ? '-0.035' : '0.035'} />
                   </span>
                   <span className="brand-card-copy"><strong>{brand.name}</strong><small>{brand.description}</small><span className="brand-open">Explore <b aria-hidden="true">↗</b></span></span>
                 </>
@@ -145,11 +145,11 @@ export default function LinkHub({ source, campaign }: HomeProps) {
 
         <section className="section discover-section">
           <div className="discover-feature">
-            <div className="discover-art discover-art-oubyt" aria-hidden="true"><span>O.</span></div>
+            <div className="discover-art discover-art-oubyt" data-parallax-depth="0.04" aria-hidden="true"><span>O.</span></div>
             <div className="discover-copy"><p className="eyebrow">WATCH / OUBYT</p><h2>Original worlds,<br />shaped for motion.</h2><p>Explore animation, visual development and story-led work from Oubyt.</p><a className="text-link" href={withAttribution('https://oubyt.vercel.app', source, 'watch')}>Visit Oubyt <span aria-hidden="true">↗</span></a></div>
           </div>
           <div className="discover-feature discover-feature-secondary">
-            <div className="discover-art discover-art-ncu" aria-hidden="true"><span>NCU</span></div>
+            <div className="discover-art discover-art-ncu" data-parallax-depth="-0.04" aria-hidden="true"><span>NCU</span></div>
             <div className="discover-copy"><p className="eyebrow">READ / NCU</p><h2>Find a story<br />world to enter.</h2><p>Meet the universes, then continue to comics available on Pylothouse.</p><Link className="text-link" href="/ncu">Explore NCU <span aria-hidden="true">↗</span></Link></div>
           </div>
         </section>
