@@ -119,9 +119,9 @@ export default function LinkHub({ source, campaign }: HomeProps) {
               const content = (
                 <>
                   <span className="brand-index">{String(index + 1).padStart(2, '0')} / NARTSTUDIO</span>
-                  <span className="brand-art" aria-hidden="true">
+                  <span className={`brand-art brand-art-${brand.imageType}`} aria-hidden="true">
                     <i />
-                    <img className={`brand-art-image brand-art-image-${brand.imageType}`} src={brand.image} alt="" loading="lazy" data-parallax-depth={index % 2 === 0 ? '-0.035' : '0.035'} />
+                    <img className={`brand-art-image brand-art-image-${brand.imageType}`} src={brand.image} alt="" loading="lazy" />
                   </span>
                   <span className="brand-card-copy"><strong>{brand.name}</strong><small>{brand.description}</small><span className="brand-open">Explore <b aria-hidden="true">↗</b></span></span>
                 </>

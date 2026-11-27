@@ -3,10 +3,10 @@ import { supportingSites } from '../lib/links'
 export default function SupportingSiteGrid() {
   return (
     <div className="supporting-grid">
-      {supportingSites.map((site, index) => {
+      {supportingSites.map((site) => {
         const content = (
           <>
-            <span className="supporting-art"><img src={site.image} alt="" loading="lazy" data-parallax-depth={index % 2 === 0 ? '-0.035' : '0.035'} /></span>
+            <span className="supporting-art"><img src={site.image} alt="" loading="lazy" /></span>
             <span className="supporting-status">{site.availability}</span>
             <strong>{site.name}</strong>
             <span className="supporting-description">{site.description}</span>
